@@ -20,30 +20,30 @@ Below is my cheat sheet:
 
 ***
 
-<b>GET    '/articles'    index action    index page to display all articles</b>
-get '/articles' do
-  @articles = Article.all
-  erb :index
+<b>GET    '/articles'    index action    index page to display all articles</b><br>
+get '/articles' do<br>
+  @articles = Article.all<br>
+  erb :index<br>
 end
 
-<b>GET        '/articles/new'          new action      displays create article form</b>
+<b>GET        '/articles/new'          new action      displays create article form</b><br>
 get '/articles/new' do
   erb :new
 end
 
-<b>POST    '/articles'      create action    creates one article</b>
-post '/articles' do
-  @article = Article.create(:title => params[:title], :content => params[:content])
-  redirect to "/articles/#{@article.id}"
+<b>POST    '/articles'      create action    creates one article</b><br>
+post '/articles' do<br>
+  @article = Article.create(:title => params[:title], :content => params[:content])<br>
+  redirect to "/articles/#{@article.id}"<br>
 end
 
-<b>GET        '/articles/:id'    show action      displays one article based on ID in the url</b>
+<b>GET        '/articles/:id'    show action      displays one article based on ID in the url</b><br>
 get '/articles/:id' do
   @article = Article.find_by_id(params[:id])
   erb :show
 end
 
-<b>GET    '/articles/:id/edit'    edit action    displays edit form based on ID in the url</b>
+<b>GET    '/articles/:id/edit'    edit action    displays edit form based on ID in the url</b><br>
 get '/articles/:id/edit' do  #load edit form
     @article = Article.find_by_id(params[:id])
     erb :edit
@@ -52,7 +52,7 @@ get '/articles/:id/edit' do  #load edit form
 *Note: for patch or put: make sure to make it so that the params are specific that it is saving. if you just do params,
 it will spaz out because there is no method variable*
 
-<b>PATCH    '/articles/:id'    update action    modifies an existing article based on ID in the url. like repainting.</b>
+<b>PATCH    '/articles/:id'    update action    modifies an existing article based on ID in the url. like repainting.</b><br>
 patch '/articles/:id' do #edit action<br>
   @article = Article.find_by_id(params[:id])<br>
   @article.title = params[:title]<br>
@@ -63,10 +63,9 @@ end<br>
 <!--<input id="hidden" type="hidden" name="_method" value="patch">-->
 make sure your form has this & use Rack::MethodOverride in application controller above all controllers
 
-<b>PUT    '/articles/:id'    update action   </b> 
-replaces an existing article based on ID in the url. completely starts with a new article.
+<b>PUT    '/articles/:id'    update action   replaces an existing article based on ID in the url. completely starts with a new article.</b><br>
 
-<b>DELETE    '/articles/:id'    delete action   deletes one article based on ID in the url </b>
+<b>DELETE    '/articles/:id'    delete action   deletes one article based on ID in the url </b><br>
 delete '/articles/:id/delete' do #delete action<br>
   @article = Article.find_by_id(params[:id])<br>
   @article.delete<br>
