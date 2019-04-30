@@ -20,31 +20,31 @@ Below is my cheat sheet:
 
 ***
 
-<b>HTTP VERB    ROUTE    Action    Used For
-GET    '/articles'    index action    index page to display all articles</b>
+<em>HTTP VERB    ROUTE    Action    Used For
+GET    '/articles'    index action    index page to display all articles</em>
 get '/articles' do
   @articles = Article.all
   erb :index
 end
 
-<b>GET        '/articles/new'          new action      displays create article form</b>
+<em>GET        '/articles/new'          new action      displays create article form</em>
 get '/articles/new' do
   erb :new
 end
 
-<b>POST    '/articles'      create action    creates one article</b>
+<em>POST    '/articles'      create action    creates one article</em>
 post '/articles' do
   @article = Article.create(:title => params[:title], :content => params[:content])
   redirect to "/articles/#{@article.id}"
 end
 
-<b>GET        '/articles/:id'    show action      displays one article based on ID in the url</b>
+<em>GET        '/articles/:id'    show action      displays one article based on ID in the url</em>
 get '/articles/:id' do
   @article = Article.find_by_id(params[:id])
   erb :show
 end
 
-<b>GET    '/articles/:id/edit'    edit action    displays edit form based on ID in the url</b>
+<em>GET    '/articles/:id/edit'    edit action    displays edit form based on ID in the url</em>
 get '/articles/:id/edit' do  #load edit form
     @article = Article.find_by_id(params[:id])
     erb :edit
@@ -52,7 +52,7 @@ get '/articles/:id/edit' do  #load edit form
 
 note for patch or put: make sure to make it so that the params are specific that it is saving. if you just do params,
 it will spaz out because there is no _method variable
-<b>PATCH    '/articles/:id'    update action    modifies an existing article based on ID in the url. like repainting.</b>
+<em>PATCH    '/articles/:id'    update action    modifies an existing article based on ID in the url. like repainting.</em>
 patch '/articles/:id' do #edit action
   @article = Article.find_by_id(params[:id])
   @article.title = params[:title]
@@ -63,9 +63,9 @@ end
 <!--<input id="hidden" type="hidden" name="_method" value="patch">-->
 make sure your form has this & use Rack::MethodOverride in application controller above all controllers
 
-<b>PUT    '/articles/:id'    update action   <b> replaces an existing article based on ID in the url. completely starts with a new article.
+<em>PUT    '/articles/:id'    update action   </em> replaces an existing article based on ID in the url. completely starts with a new article.
 
-DELETE    '/articles/:id'    delete action    deletes one article based on ID in the url
+<em>DELETE    '/articles/:id'    delete action</em>    deletes one article based on ID in the url
 delete '/articles/:id/delete' do #delete action
   @article = Article.find_by_id(params[:id])
   @article.delete
