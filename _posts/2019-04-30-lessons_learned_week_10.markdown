@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Lessons Learned: Week 10"
-date:       2019-04-30 16:27:24 +0000
+date:       2019-04-30 12:27:24 -0400
 permalink:  lessons_learned_week_10
 ---
 
