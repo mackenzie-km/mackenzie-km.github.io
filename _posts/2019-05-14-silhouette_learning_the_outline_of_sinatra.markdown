@@ -1,12 +1,12 @@
 ---
 layout: post
 title:      "Silhouette: Learning the Outline of Sinatra"
-date:       2019-05-14 21:28:18 +0000
+date:       2019-05-14 17:28:19 -0400
 permalink:  silhouette_learning_the_outline_of_sinatra
 ---
 
 
-Today I reached a big milestone - completion of my Sinatra project (Silhouette)!
+Today I reached a big milestone - completion of my Sinatra project (<a href="https://github.com/mackenzie-km/silhouette">Silhouette</a>)!
 
 Of course - there are more features I want to add someday. But, for now, it's ready for feedback.
 
