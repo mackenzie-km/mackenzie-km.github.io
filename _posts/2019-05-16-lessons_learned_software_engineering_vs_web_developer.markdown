@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Lessons Learned: Software Engineering vs. Web Developer?"
-date:       2019-05-16 16:35:32 +0000
+date:       2019-05-16 12:35:33 -0400
 permalink:  lessons_learned_software_engineering_vs_web_developer
 ---
 
