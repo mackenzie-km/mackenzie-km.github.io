@@ -17,13 +17,17 @@ Here are some brief thoughts on the topic - why I chose it, and how they're even
 
 They're similar:
 > Every web developer who is employable is a software engineer. -[Firehose Project](http://blog.thefirehoseproject.com/posts/software-engineer-vs-web-developer/)
+
+
 So - they ARE similar! They're both programmers, and they both share a similar skill set of coding.
 
 But the skill set is more narrow for web development:
 > One difference, however, is that web development...requires a more-limited skill set than software development. A working understanding of a few specific programming languages, such as JavaScript or Java, and a clear idea of the business end-goals of the webpages in question are often enough. [DevMountain](http://https://blog.devmountain.com/web-development-vs-software-development-which-is-the-better-career-choice/)
+
 When considering how they're different, I need to remember the difference in the programming languages required. 
 
 >  Most software developers need to complete at least a bachelor’s degree, during which time they learn not only programming code, but also computer fundamentals, computer architecture, and data structure. [DevMountain](https://blog.devmountain.com/web-development-vs-software-development-which-is-the-better-career-choice/)
+
 With software development, it's a more broad term. There's a lot more to dig deep in and learn, and I could spend 4+ years learning it in school.
 
 
