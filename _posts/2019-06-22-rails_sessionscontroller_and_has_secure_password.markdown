@@ -1,27 +1,30 @@
 ---
 layout: post
 title:      "Rails: SessionsController & has_secure_password"
-date:       2019-06-22 22:51:17 +0000
+date:       2019-06-22 18:51:18 -0400
 permalink:  rails_sessionscontroller_and_has_secure_password
 ---
 
 I was really disappointed with the has_secure_password section because I didn’t feel prepared for all the concepts introduced in the lab. So here’s a blog post about some of the steps I took to navigate these concepts.
 
-What the heck? SessionsController? How does this interact with UsersController?
+**What the heck? SessionsController? How does this interact with UsersController?**
+
 1. Get some more background knowledge. I checked out [this wordy](https://www.railstutorial.org/book/basic_login) (but helpful) guide in seciton 8.1.1 to learn more about what SessionsController was intended for. I also read around some other sections on the page as a refresher on sessions and routes.
     1. I learned that SessionsController really should be the controller that manages sessions#new (login page), sessions#create (setting your session_id), and sessions#destroy (the logout feature)
     2. What does this leave UsersController for, then? users#new should be a sign-up page. users#create should create a new user if the passwords match. 
 
-Preparing to use has_secure_password 
+**Preparing to use has_secure_password **
+
 1. Add the bcrypt gem to your Gemfile
 2. Run bundle install & update
-3. Create your users table (remember NOT to make a password column - this isn’t secure. Make a password_digest column so that bcrypt can save only the salted and hashed password digest)
+3. Create your users table (remember NOT to make a password column - this isn’t secure. Make a passworddigest column so that bcrypt can save only the salted and hashed password digest)
 4. Run your migrations 
 5. Create your user model & play around with it in console to make sure it’s working as expected
-6. Add has_secure_password to your user model 
-Woop woop - now you have access to methods like password & password_confirmation to verify your password!! You also have access to things like authenticate to make sure that the user’s submitted password matches the expected password.
+6. Add hassecurepassword to your user model 
+Woop woop - now you have access to methods like password & passwordconfirmation to verify your password!! You also have access to things like authenticate to make sure that the user’s submitted password matches the expected password.
 
-How do I make new users? (This should be a lot of review!)
+**How do I make new users? (This should be a lot of review!)**
+
 1. Set up my UsersController
     1. class UsersController < ApplicationController
         1. def new 
@@ -51,7 +54,7 @@ How do I make new users? (This should be a lot of review!)
 
 I’m in!! Yes!!! But next time I visit this page… I’m gonna need to login & logout. I’m going to need a sessions controller.
 
-How do I set up my SessionsController for submitting, creating, and destroying a session in the browser?
+**How do I set up my SessionsController for submitting, creating, and destroying a session in the browser?**
     1. class SessionsController < ApplicationController
         1. def new 
         2. end 
@@ -78,6 +81,7 @@ How do I set up my SessionsController for submitting, creating, and destroying a
         1. You will need to redirect_to the users#new action (to make a new user) or the login page (try again) if not. 
         2. If they were authenticated, try to set session[:user_id] to the user’s id. Redirect them to your homepage or wherever!
 4. To let the user logout, go into sessions#destroy to use the .delete method on the session[:user_id], and redirect them to your homepage 
+
 
 Fixing this implementation of my SessionsController made all of my tests turn green. Cross checking the solution, this seems to be mostly accurate. This may not be 100% accurate, but doing all of this really helped me to start building a conceptual foundation!
 
