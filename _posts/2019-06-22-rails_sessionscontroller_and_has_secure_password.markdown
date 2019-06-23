@@ -94,7 +94,7 @@ post   '/login',   to: 'sessions#create'
 delete '/logout',  to: 'sessions#destroy'
 ```
 
-3. I made the session/new view & I copied the same create user form into the session/new view 
+3. I made the `session/new view` & I copied the same create user form into the `session/new view `
 ```
 <%= form_for :user, url: ‘/login' do |f| %>
 Username: <%= f.text_field :name %>
