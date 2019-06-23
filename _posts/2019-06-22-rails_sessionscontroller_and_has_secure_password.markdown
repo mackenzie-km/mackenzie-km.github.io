@@ -33,7 +33,7 @@ Woop woop - now you have access to methods like `password & password_confirmatio
 
 **How do I make new users? (This should be a lot of review!)**
 
-Set up my UsersController
+1. Set up my UsersController
   ```
   class UsersController < ApplicationController
     def new 
