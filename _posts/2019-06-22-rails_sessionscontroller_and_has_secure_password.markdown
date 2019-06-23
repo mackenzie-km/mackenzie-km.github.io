@@ -47,6 +47,7 @@ Woop woop - now you have access to methods like `password & password_confirmatio
 * get '/users/new', to: "users#new"
 * post '/users', to: "users#create"
 
+
 3. I made the user/new view with a nice create a user form 
    ```
  <%= form_for :user, url: ‘/users' do |f| %>
