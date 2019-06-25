@@ -90,9 +90,9 @@ end
 
 2. I used that guide to set up my routes 
 ```
-get    '/login',   to: 'sessions#new'
-post   '/login',   to: 'sessions#create'
-delete '/logout',  to: 'sessions#destroy'
+get    '/login',   to: 'sessions#new' (or to make it restful, make it /sessions/new)
+post   '/login',   to: 'sessions#create' (or just /sessions)
+delete '/logout',  to: 'sessions#destroy' (or just /sessions)
 ```
 
 3. I made the `session/new view` & I copied the same create user form into the `session/new view `
