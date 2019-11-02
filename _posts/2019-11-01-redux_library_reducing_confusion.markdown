@@ -15,6 +15,7 @@ After spending all afternoon learning about the Redux Library, I decided it was 
 
 To sort out my thoughts, here's my personal guide on how to implement redux in our React projects.
 
+
 ## Installing Redux
 If it's not in your package.json file
 ```
@@ -25,6 +26,7 @@ When it's in your package.json, you can begin using React as usual
 ```
 npm install && npm start
 ```
+
 
 ## Setting up a store
 Use redux's version of createStore()!
@@ -69,6 +71,7 @@ And wrap your app in this Provider
 ```
 
 App will now receive the store you created as a prop. It can be accessed in this.props!
+
 
 ## Connecting components to the store 
 That's great - we don't have to keep passing it in to all of the other components! But how can the components update the store?
@@ -134,6 +137,7 @@ export default connect(
 Above is a cool example of mapping the state and dispatch method. 
 
 Because you sent these values/functions to the App Component, App has access to these as props. Now you can actually use `this.props.increaseCount();` within your App component! You told the app how to dispatch it.
+
 
 ## Q&A of connect
 
