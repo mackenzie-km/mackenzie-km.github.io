@@ -51,6 +51,7 @@ import customReducer from './reducers/customReducer'
 ```
 
 
+
 ## Passing your store to components
 If we had to pass in our store as a prop to every component, we would be wasting our time (and missing out on all that Redux does!)
 
@@ -71,6 +72,7 @@ And wrap your app in this Provider
 ```
 
 App will now receive the store you created as a prop. It can be accessed in this.props!
+
 
 
 ## Connecting components to the store 
