@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Redux Library: Reducing Confusion"
-date:       2019-11-02 00:28:07 +0000
+date:       2019-11-01 20:28:08 -0400
 permalink:  redux_library_reducing_confusion
 ---
 
