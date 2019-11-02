@@ -6,9 +6,9 @@ permalink:  redux_library_reducing_confusion
 ---
 
 ## Mindblown
-![https://media.giphy.com/media/SJX3gbZ2dbaEhU92Pu/giphy.gif](https://media.giphy.com/media/SJX3gbZ2dbaEhU92Pu/giphy.gif)
-
 After spending all afternoon learning about the Redux Library, I decided it was time to go back to the basics.
+
+![https://media.giphy.com/media/SJX3gbZ2dbaEhU92Pu/giphy.gif](https://media.giphy.com/media/SJX3gbZ2dbaEhU92Pu/giphy.gif)
 
 > re·dux /rēˈdəks,ˈrēˈdəks/ (adjective) :brought back; revived.
 
