@@ -6,11 +6,12 @@ permalink:  redux_library_reducing_confusion
 ---
 
 ## Mindblown
+![https://media.giphy.com/media/SJX3gbZ2dbaEhU92Pu/giphy.gif](https://media.giphy.com/media/SJX3gbZ2dbaEhU92Pu/giphy.gif)
+
 After spending all afternoon learning about the Redux Library, I decided it was time to go back to the basics.
 
 > re·dux /rēˈdəks,ˈrēˈdəks/ (adjective) :brought back; revived.
 
-![https://media.giphy.com/media/SJX3gbZ2dbaEhU92Pu/giphy.gif](https://media.giphy.com/media/SJX3gbZ2dbaEhU92Pu/giphy.gif)
 
 To sort out my thoughts, here's my personal guide on how to implement redux in our React projects.
 
