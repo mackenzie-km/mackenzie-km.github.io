@@ -5,10 +5,9 @@ date:       2019-11-01 20:28:08 -0400
 permalink:  redux_library_reducing_confusion
 ---
 
+After spending all afternoon learning about the Redux Library, I decided it was time to go back to the basics.
 
 > re·dux /rēˈdəks,ˈrēˈdəks/ (adjective) :brought back; revived.
-
-After spending all afternoon learning about the Redux Library, I decided it was time to go back to the basics.
 
 ![https://media.giphy.com/media/SJX3gbZ2dbaEhU92Pu/giphy.gif](https://media.giphy.com/media/SJX3gbZ2dbaEhU92Pu/giphy.gif)
 
