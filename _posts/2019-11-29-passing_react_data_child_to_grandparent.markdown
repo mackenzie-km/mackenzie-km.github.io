@@ -65,7 +65,7 @@ This would console.log the html element that triggered the event.
 
 **Final note:** using an arrow function like` () => function()` creates a new function each time. This may slow down your app. Look into optimization techniques if your app is getting slowed down by this. 
 
-![http://giphy.com/gifs/JMV7IKoqzxlrW/html5](http://giphy.com/gifs/JMV7IKoqzxlrW/html5)
+![](https://giphy.com/gifs/JMV7IKoqzxlrW/html5)
 
 On that note, let's get back to the second question: how do I pass data from a child to a grandparent?
 
