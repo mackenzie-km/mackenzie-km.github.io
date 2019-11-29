@@ -163,7 +163,31 @@ export default Grandparent;
 
 ```
 
+## Writing this inline
+Note: Instead of having a separate function, you can reference the props directly.
 
+Here's an example of what I mean:
+
+```
+
+// parent.js
+import React from 'react';
+import Child from './child.js';
+
+const Parent = (props) => {
+
+return (
+  <div>
+    <Child sendToParent={props.sendToGrandparent} />
+  </div>
+  )
+}
+
+export default Parent;
+
+```
+
+This will reference the funciton passed down in sendToGrandparent in grandparent.js directly
 
 ## Hope this clears things up!
 I feel more ready for my interview.... kinda!
