@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Passing React Data: Child to Grandparent"
-date:       2019-11-29 05:54:46 +0000
+date:       2019-11-29 00:54:47 -0500
 permalink:  passing_react_data_child_to_grandparent
 ---
 
@@ -87,15 +87,25 @@ export default Child;
 ```
 
 ### Now we go to the parent
+
+#### LONG SIDEPOINT:
 Note how receiveFromChild isn't written as () => receiveFromChild(value). 
 
 Why? props.sendToParent(value) was in the child. This was equal to our pre-populated function.
 Sooo... receiveFromChild is pre-populated. 
 
 If you try to do receiveFromChild(value), it complaints that value is not defined.
-If you try to do receiveFromChild("hello!"), it complains that props.sendToParent is not a real function (in child.js). Wut..... a simple console.log(receiveFromChild("hello") prints undefined. I think this is because of the following quote:
+If you try to do receiveFromChild("hello!"), it complains that props.sendToParent is not a real function (in child.js). A simple console.log(receiveFromChild("hello") prints undefined. 
 
-> When a function call is made on a built-in method that expects a callback function argument to be provided, but no such function exists. -[Airbrake.io ](https://airbrake.io/blog/javascript-error-handling/x-is-not-a-function-typeerror) It seems that receiveFromChild("hello") is looking for a callback function to put this value into, but there is no such callback (remember, receiveFromChild is pre-populated). Let me double check on this theory...
+Wut?!
+receiveFromChild already returns a pre-populated function. To do receiveFromChild(value) is to try to stick a value into a callback function that doesn't exist. There's no place to put the value! Everything is pre-populated. This isn't a callback function.
+
+To visualize this issue better, imagine this example:
+let popup = () => {
+  alert("WOW")
+}
+
+If you do alert() - you'll see a popup. If you do alert()(), you will see a popup... and then an error in console log. It runs alert() just fine, but after it then tries to run the second set of parenthesis as a function with this value (in this case, no value; empty parenthesis) plugged in. But the return value of alert() isn't a callback function. It's just undefined. So you're trying to say undefined()... no bueno.
 
 Anyways, a simple reference to the parent's callback function (receiveFromChild) will sufficiently reference our pre-filled function.
 
